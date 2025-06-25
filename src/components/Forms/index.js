@@ -19,7 +19,12 @@ const Forms = (props) => {
             cargo,
             imagem,
             time
-        });
+        })
+        setNome('')
+        setCargo('')
+        setImagem('')
+        setTime('')
+        ;
     }
 
     return (

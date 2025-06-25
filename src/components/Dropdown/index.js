@@ -9,8 +9,9 @@ const Dropdown = (props) => {
     return (
         <div className='dropdown'>
             <label>{props.label}</label>
-            <select onChange={aoTyped} required={props.requiredField} value={props.value}>
-                {props.itens.map(item => <option key={item}>{item}</option>)}
+            <select default="" onChange={aoTyped} required={props.requiredField} value={props.value}>
+                <option value="" selected disabled hidden>Selecione o time</option>
+                {props.itens.map(item => <option value={item} key={item}>{item}</option>)}
             </select>
         </div>
     )

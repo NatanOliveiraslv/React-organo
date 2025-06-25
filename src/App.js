@@ -1,4 +1,4 @@
-import Banner from './components/Banner/Banner';
+import Banner from './components/Banner';
 import Forms from './components/Forms';
 import { useState } from 'react';
 import Team from './components/Team';
@@ -46,7 +46,7 @@ function App() {
   const [colaboradores, setColaboradores] = useState([]);
 
   const aoNewCollaboratorAdd = (colaborador) => {
-    console.log(colaborador);
+    debugger
     setColaboradores([...colaboradores, colaborador])
   }
 
@@ -60,6 +60,7 @@ function App() {
             name={time.nome}
             primaryColor={time.corPrimaria}
             secondaryColor={time.corSecundaria}
+            collaborators={colaboradores.filter(colaborador => colaborador.time === time.nome)}
           />
       )}
     </div>
